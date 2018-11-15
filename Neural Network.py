@@ -18,11 +18,12 @@ def sigmoid(z):
     return sig
     
 def forward(x):
-    z1=np.dot(X,w1)+b
+    global x,w1,b1,w2,b2
+    z1=np.dot(X,w1)+b1
     a1=tanh(z1)
     z2=np.dot(a1,w2)+b2
     a2=tanh(z2)
-    z3=a2.w3+b3
+    z3=np.dot(a2,w3)+b3
     a3=sigmoid(z3)
     
     
