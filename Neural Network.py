@@ -9,15 +9,15 @@ import numpy as np
 import pandas as pd
 
 
-x,y,w1,b1,w2,b2,w3,b3=None
 
+x,y,w1,b1,w2,b2=None
 
 
 def sigmoid(z):
     sig=1/(1+np.exp(-z))
     return sig
     
-def forward(x):
+def forward():
     global x,w1,b1,w2,b2
     z1=np.dot(X,w1)+b1
     a1=tanh(z1)
@@ -26,4 +26,7 @@ def forward(x):
     z3=np.dot(a2,w3)+b3
     a3=sigmoid(z3)
     
+
+def backprop():
+    global x,w1,b1,w2,b2
     
