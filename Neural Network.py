@@ -12,7 +12,13 @@ import pandas as pd
 
 x,y,w1,b1,w2,b2=None
 
-
+def init_params(size):
+    l=len(size)
+    parameters={}
+    for i in range(1,l):
+        parameters{"W"+str(l)}=np.random.randn(size[i],size[i-1])*0.01
+        parameters{"b"+str(l)}=np.zeros((size(l),1))
+    
 def sigmoid(z):
     sig=1/(1+np.exp(-z))
     return sig
