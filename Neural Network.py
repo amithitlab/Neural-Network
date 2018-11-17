@@ -18,6 +18,7 @@ def init_params(size):
     for i in range(1,l):
         parameters{"W"+str(l)}=np.random.randn(size[i],size[i-1])*0.01
         parameters{"b"+str(l)}=np.zeros((size(l),1))
+     return parameters
     
 def sigmoid(z):
     sig=1/(1+np.exp(-z))
