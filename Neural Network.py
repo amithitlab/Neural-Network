@@ -36,4 +36,5 @@ def forward():
 
 def backprop():
     global x,w1,b1,w2,b2
-    
+    dy=pred-y
+    dZ2=dW*dy
