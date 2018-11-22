@@ -9,10 +9,7 @@ import numpy as np
 import pandas as pd
 
 
-
-x,y,w1,b1,w2,b2=None
-
-def init_params(size):
+def init(size):
     l=len(size)
     parameters={}
     for i in range(1,l):
@@ -25,7 +22,7 @@ def sigmoid(z):
     return sig
     
 def forward():
-    global x,w1,b1,w2,b2
+    
     z1=np.dot(X,w1)+b1
     a1=tanh(z1)
     z2=np.dot(a1,w2)+b2
@@ -35,6 +32,5 @@ def forward():
     
 
 def backprop():
-    global x,w1,b1,w2,b2
     dy=pred-y
     dZ2=dW*dy
